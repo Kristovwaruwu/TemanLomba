@@ -77,3 +77,9 @@ p.card-text{
 a.card-lomba:hover {
     text-decoration: none
 }
+
+#round-img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
