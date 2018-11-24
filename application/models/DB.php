@@ -23,11 +23,9 @@ class DB extends CI_Model {
 		/*
 			Creating User
 		*/
-		$arr = array($arr["Username"], $arr["Password"], $arr["Email"],
-			$arr["Institution"], $arr["Bio"]
-		);
-		$q = "INSERT INTO tbl_user (Username,Password,Email,Institution,Bio) VALUES (?,?,?,?,?)";
-		return $this->db->simple_query($q,$arr);
+		$arr = array($arr["Username"], $arr["Password"], $arr["Email"]);
+		$q = "INSERT INTO tbl_user (Username,Password,Email) VALUES ( ? , ? , ? )";
+		return ($this->db->query($q,$arr))?true:false;
 	}
 
 	public function getUserData($uname)

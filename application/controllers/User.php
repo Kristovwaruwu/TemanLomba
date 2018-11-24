@@ -68,11 +68,14 @@ class User extends CI_Controller {
 		if ($result) 
 		{
 			//TODO send kalau berhasil daftar
+			$_SESSION['username'] = $_POST["Username"];
 			header('Location: '.base_url()."dashboard");	
 			die();
 		}
 		else {
 			//TODO set kalau gagal daftar
+			header('Location: '.base_url());
+			die();
 		}
 	}
 
