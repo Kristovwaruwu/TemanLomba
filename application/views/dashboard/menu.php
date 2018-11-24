@@ -8,6 +8,10 @@
                   <span data-feather="home"></span>
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
+                <a class="nav-link" href="#">
+                  <span data-feather="home"></span>
+                  Lomba<span class="sr-only"></span>
+                </a>
               </li>
             </ul>
           </div>
