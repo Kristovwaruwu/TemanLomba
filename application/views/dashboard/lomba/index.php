@@ -11,7 +11,7 @@
           <?php if(!empty($lomba)){ 
             foreach ($lomba as $data) {?>
 
-          <div class="col-md-3">
+          <div class="col-md-3 card-container">
             <div class="card-group">
               <div class="card">
     <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
