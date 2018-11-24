@@ -11,20 +11,14 @@ class Profile extends CI_Controller {
     }
     
 	function index(){
-        /*
-        if (isset($_SESSION['Username'])){
-            header('Location: '.base_url()."profile/".$_SESSION['Username']);
+        if (isset($_SESSION['username'])){
+            header('Location: '.base_url()."profile/".$_SESSION['username']);
             die();
         }
         else{
             header('Location: '.base_url());
             die();
-        }*/
-
-        $uname = $_SESSION['username'];
-		$params['page'] = 'view/index';
-		$params['data']['data'] = $this->DB->getUserData($uname);
-		$this->load->view('profile/layout',$params);
+        }
     }
 
     function otherProfile($id)
@@ -41,6 +35,9 @@ class Profile extends CI_Controller {
     }
     
     function edit(){
+        if (!isset($_SESSION['username'])){
+            header('Location: '.base_url());
+        }
         $uname = $_SESSION['username'];
         $params['page'] = 'edit/index';
         $params['data']['data'] = $this->DB->getUserData($uname);
