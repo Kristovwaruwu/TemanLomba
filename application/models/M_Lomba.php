@@ -15,6 +15,17 @@ class M_Lomba extends CI_Model {
 		return $this->db->get("Tbl_Kategori")->result();
 	}
 
+	public function getSingleLomba($id){
+		//TODO buat informasi lebih lanjut tiap lomba, list orang yang mengambil
+		$q = "SELECT l.Judul,u.Name 
+			FROM tbl_request r 
+			INNER JOIN tbl_lomba l on r.Id_Lomba = l.Id_Lomba 
+			INNER JOIN tbl_user u on r.Id_User = u.Id_User 
+			WHERE r.Id_Lomba = $id ";
+		$result = $this->db->query($q);
+		return $result->result_array();
+	}
+
 	public function getByIdKategori($id){
 		return $this->db->get_where("Tbl_Kategori",['Id_Kategori'=>$id])->row();
 	}
