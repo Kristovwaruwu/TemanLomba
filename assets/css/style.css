@@ -55,3 +55,7 @@ p.card-text{
     border: .25rem solid transparent;
 
 }
+
+a.card-lomba:hover {
+    text-decoration: none
+}
