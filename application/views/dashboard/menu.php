@@ -6,6 +6,8 @@
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <span data-feather="home"></span>
+                  
+                  <br>
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
                 <a class="nav-link" href="<?= base_url() ?>dashboard/lomba">
