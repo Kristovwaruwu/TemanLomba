@@ -3,21 +3,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class DB extends CI_Model {
 
-	public $user;
-
-	public function login($password)
+	public function login($user, $password)
 	{
+		/*
+			Checking login
+		*/
 		//hashing
 		$password = $password;
-		$q = "SELECT * FROM user WHERE uname = '$this->user' AND pass = '$password' ";
+
+		$q = "SELECT * FROM tbl_user WHERE Username = '$this->user' AND Password = '$password' ";
 		$query = $this->db->query($q);
+		$result = $query->result_array();
 		//return $query->result();
-		return $q;
+		return count($result)?true:false;
 	}
 
-	public function setUser($user)
+	public function createUser($arr)
 	{
-		$this->user = $user;
+		/*
+			Creating User
+		*/
+		$arr = array($arr["Username"], $arr["Password"], $arr["Email"],
+			$arr["Institution"], $arr["Bio"]
+		);
+		$q = "INSERT INTO tbl_user (Username,Password,Email) VALUES (?,?,?)";
+		return $this->db->simple_query($q,$arr);
 	}
-
 }

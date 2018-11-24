@@ -6,9 +6,10 @@ class User extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+
+		session_start();
 		$this->load->database();
 		$this->load->model('DB');
-		$this->DB->user = "test";
 	}
 
 	public function index()
@@ -18,21 +19,16 @@ class User extends CI_Controller {
 
 	public function login()
 	{
-		//TODO atur set ke userna
-		if (!isset( $_POST["uname"])){
-			//echo base_url();
-			//header('Location: '.base_url());
-			//die();
+		if (!isset( $_POST["password"])){
+			header('Location: '.base_url()."dashboard");
 		}
-		$result = $this->DB->login("123");
+		$uname = $_POST["username"];
+		$password = $_POST["password"];
 
-		echo $result;
-		if ($result){
-			echo '1';
-		}
-		else{
-			echo '0';
-		}
+		$result = $this->DB->login($uname, $password);
+
+		//set into session
+		$SESSION["username"] = $uname;
 		
 	}
 }
