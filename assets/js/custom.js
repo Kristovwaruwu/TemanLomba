@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
 	$('#post-lomba').bootstrapValidator({
 		message: 'This value is not valid',
 		feedbackIcons: {

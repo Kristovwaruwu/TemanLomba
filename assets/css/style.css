@@ -78,8 +78,18 @@ a.card-lomba:hover {
     text-decoration: none
 }
 
+.dashboard-img{
+    margin-left: 27px;
+    margin-right: 27px;
+    text-align: center;
+}
+
 #round-img{
-    border-radius: 50%;
-    width: 100%;
+    width: 70%;
     height: 100%;
+}
+
+.badge-costom{
+    background: #ffc107;
+    color: white;
 }

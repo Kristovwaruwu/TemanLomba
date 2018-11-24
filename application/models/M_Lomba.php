@@ -29,4 +29,9 @@ class M_Lomba extends CI_Model {
 	public function getByIdKategori($id){
 		return $this->db->get_where("Tbl_Kategori",['Id_Kategori'=>$id])->row();
 	}
+
+	public function deleteLomba($id){
+		$q = "DELETE FROM tbl_lomba where Id_Lomba = $id";
+		return $this->db->simple_query($q);
+	}
 }
