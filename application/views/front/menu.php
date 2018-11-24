@@ -1,6 +1,6 @@
   <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Temanlomba</h3>
+          <img class="masthead-brand" src="logo tl trans2.png" width="10%" height="10%">
           <nav class="nav nav-masthead nav-custom">
             <a class="nav-link active" href="#">Home</a>
             <a class="nav-link" href="#">Dashboard</a>
