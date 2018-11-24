@@ -3,7 +3,7 @@
             <h1 class="h2">Lomba</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-primary">Tambah</button>
+                <a href="<?= base_url() ?>dashboard/lomba/tambah" class="btn btn-sm btn-primary">Tambah</a>
               </div>
             </div>
           </div>
@@ -18,7 +18,8 @@
     <div class="card-body">
       <h5 class="card-title"><?= $data->Judul ?></h5>
       <p class="card-text"><?= $data->Deskripsi ?></p>
-      <p class="card-text"><small class="text-muted"><?= $data->Waktu ?></small></p>
+      <?php ?>
+      <p class="card-text"><small class="text-muted">kategori : <?= $data->Waktu ?></small></p>
     </div>
   </div>
           </div>

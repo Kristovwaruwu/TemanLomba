@@ -7,4 +7,11 @@ class M_Lomba extends CI_Model {
 	public function getAll(){
 		return $this->db->get($this->_Tabel)->result();
 	}
+
+	public function save($data){
+		return $this->db->insert($this->_Tabel,$data);
+	}
+	public function getAllKategoriLomba(){
+		return $this->db->get("Tbl_Kategori")->result();
+	}
 }
