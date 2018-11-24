@@ -10,7 +10,7 @@
       <div class="modal-body" >
         <form action="<?php echo base_url()?>user/login" method="post">
 			<div class="form-group" >
-			  <input name="Username" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+			  <input name="Username" class="form-control" id="inputEmail1" placeholder="Username">
       </div>
       <div class="form-group">
 			  <input name="Password" type="password" class="form-control" id="inputPassword1" placeholder="Password">
