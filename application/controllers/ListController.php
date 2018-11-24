@@ -9,9 +9,9 @@ class ListController extends CI_Controller {
 	}
 
 	public function index(){
-		$params['page'] = 'list/index';
+		$params['page'] = 'list-lomba/index';
 		$params['data']['lomba']=$this->M_Lomba->getAll();
-		$this->load->view('list/layout',$params);
+		$this->load->view('front/layout',$params);
 	}
 
 	
