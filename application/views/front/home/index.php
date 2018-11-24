@@ -3,7 +3,7 @@
         <p class="lead">Temanlomba merupakan sebuah platform yang bisa membantu kamu untuk mencari partner lomba yang kamu inginkan!</p>
 		master
         <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary btn-home">Mulai cari partnermu hari ini!!</a>
+          <a href="<?= base_url() ?>list" class="btn btn-lg btn-secondary btn-home">Mulai cari partnermu hari ini!!</a>
         </p>
 </main>
 
