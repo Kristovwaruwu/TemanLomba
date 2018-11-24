@@ -6,8 +6,6 @@ class User extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-
-		session_start();
 		$this->load->database();
 		$this->load->model('DB');
 	}
@@ -25,6 +23,8 @@ class User extends CI_Controller {
 
 	public function login()
 	{
+		session_start();
+
 		if (!isset( $_POST["Password"])){
 			header('Location: '.base_url()."dashboard");
 		}
@@ -36,18 +36,19 @@ class User extends CI_Controller {
 		//set into session
 		if ($result) 
 		{
-			$SESSION["username"] = $uname;
-			$SESSION["status"] = "active";
-			echo 'test';
+			// $SESSION["username"] = $uname;
+			// $SESSION["status"] = "active";
 
 			//TODO send kalau berhasil login
-			//header('Location: '.base_url()."welcome");	
+			header('Location: '.base_url()."dashboard");	
+			die();
 		}
 		else {
 			//TODO set kalau salah
 			echo 'gagal';
 
-			//header('Location: '.base_url()."dashboard");
+			header('Location: '.base_url());
+			die();
 		}
 	}
 
@@ -74,6 +75,11 @@ class User extends CI_Controller {
 		else {
 			//TODO set kalau gagal daftar
 		}
+	}
+
+	public function edit()
+	{
+
 	}
 
 	

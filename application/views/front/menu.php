@@ -4,7 +4,7 @@
           <nav class="nav nav-masthead nav-custom">
             <a class="nav-link active" href="#">Home</a>
             <a class="nav-link" href="#">Dashboard</a>
-            <a href="#" class="btn btn-danger " role="button">Login</a>
+            <button href="#" class="btn btn-danger " role="login" data-toggle="modal" data-target="#loginModal">Login</button>
           </nav>
          
         </div>
