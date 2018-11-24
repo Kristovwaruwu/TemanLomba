@@ -53,6 +53,7 @@ $route['dashboard'] = 'DashboardController';
 
 $route['dashboard/lomba'] = 'LombaController';
 $route['dashboard/lomba/tambah'] = 'LombaController/add';
+$route['profile/(:any)'] = 'Profile/otherProfile/$1';
 
 $route['default_controller'] = 'HomeController';
 $route['404_override'] = '';
