@@ -5,3 +5,4 @@
           <a href="#" class="btn btn-lg btn-secondary btn-home">Mulai cari partnermu hari ini!!</a>
         </p>
 </main>
+
