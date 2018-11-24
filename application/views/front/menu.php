@@ -1,11 +1,11 @@
-  <header class="masthead mb-auto">
+  <header class="p-3 masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Temanlomba</h3>
+          <img class="masthead-brand" src="<?php echo base_url() ?>assets/img/logo_tl_trans_(2).png" width="80">
           <nav class="nav nav-masthead nav-custom">
             <a class="nav-link active" href="#">Home</a>
             <a class="nav-link" href="#">Dashboard</a>
-            <button class="btn btn-danger" role="login" data-toggle="modal" data-target="#loginModal">Login</button>
-          </nav>
-         
+            <button class="nav-link" role="register" data-toggle="modal" data-target="#registermodal">Signup</button>
+            <button class="btn btn-danger" role="login" data-toggle="modal" data-target="#loginModal" id="button">Login</button>
+          </nav> 
         </div>
       </header>

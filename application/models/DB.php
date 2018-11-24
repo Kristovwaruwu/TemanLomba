@@ -23,19 +23,18 @@ class DB extends CI_Model {
 		/*
 			Creating User
 		*/
-		$arr = array($arr["Username"], $arr["Password"], $arr["Email"],
-			$arr["Institution"], $arr["Bio"]
-		);
-		$q = "INSERT INTO tbl_user (Username,Password,Email,Institution,Bio) VALUES (?,?,?,?,?)";
-		return $this->db->simple_query($q,$arr);
+		$arr = array($arr["Username"], $arr["Password"], $arr["Email"]);
+		$q = "INSERT INTO tbl_user (Username,Password,Email) VALUES ( ? , ? , ? )";
+		return ($this->db->query($q,$arr))?true:false;
 	}
 
 	public function getUserData($uname)
 	{
 		$q = "SELECT Username,Email,Name,Institution,Bio,Main_interest FROM tbl_user WHERE Username = ? LIMIT 1";
 		$result = $this->db->query($q,$uname);
-
-		return $result->row_array();
+		if ($result->num_rows())
+			return $result->row_array();
+		return -1;
 	}
 
 	public function setUserData($arr)

@@ -23,7 +23,6 @@ class User extends CI_Controller {
 
 	public function login()
 	{
-		session_start();
 
 		if (!isset( $_POST["Password"])){
 			header('Location: '.base_url()."dashboard");
@@ -69,11 +68,14 @@ class User extends CI_Controller {
 		if ($result) 
 		{
 			//TODO send kalau berhasil daftar
+			$_SESSION['username'] = $_POST["Username"];
 			header('Location: '.base_url()."dashboard");	
 			die();
 		}
 		else {
 			//TODO set kalau gagal daftar
+			header('Location: '.base_url());
+			die();
 		}
 	}
 
