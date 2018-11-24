@@ -11,7 +11,7 @@ class DB extends CI_Model {
 		//hashing
 		$password = $password;
 
-		$q = "SELECT * FROM tbl_user WHERE Username = '$this->user' AND Password = '$password' ";
+		$q = "SELECT * FROM tbl_user WHERE Username = '$user' AND Password = '$password' ";
 		$query = $this->db->query($q);
 		$result = $query->result_array();
 		//return $query->result();
@@ -26,7 +26,9 @@ class DB extends CI_Model {
 		$arr = array($arr["Username"], $arr["Password"], $arr["Email"],
 			$arr["Institution"], $arr["Bio"]
 		);
-		$q = "INSERT INTO tbl_user (Username,Password,Email) VALUES (?,?,?)";
+		$q = "INSERT INTO tbl_user (Username,Password,Email,Institution,Bio) VALUES (?,?,?,?,?)";
 		return $this->db->simple_query($q,$arr);
 	}
+
+	
 }
