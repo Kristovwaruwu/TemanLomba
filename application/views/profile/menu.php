@@ -13,11 +13,12 @@
                     <div class="col-md-6">
                         <div class="profile-head">
                                     <h5>
-                                        Kshiti Ghelani
+                                        <?php echo $data['Name'] ?>
                                     </h5>
                                     <h6>
-                                        Web Developer and Designer
+                                        <?php echo $data['Main_interest'] ?>
                                     </h6>
+                                    <p><?php echo $data['Bio']; ?></p>
                                     <p class="proile-rating">RANKINGS : <span>8/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
@@ -56,15 +57,7 @@
                                                 <label>User Id</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Kshiti123</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Name</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Kshiti Ghelani</p>
+                                                <p><?php echo $data['Username']; ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -72,7 +65,7 @@
                                                 <label>Email</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>kshitighelani@gmail.com</p>
+                                                <p><?php echo $data['Email']; ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -80,29 +73,13 @@
                                                 <label>Institution</label>
                                             </div>
                                             <div class="col-md-6">
-                                                <p>Universitas Sumatera Utara</p>
+                                                <p><?php echo $data['Institution']; ?></p>
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>123 456 7890</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Profession</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>Student</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                        <div class="col-md-10">
+                                            <div class="col-md-10">
                                             <label for="exampleFormControlTextarea1">Bio</label>
-                                             <text class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                <text class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div>
                                         </div>
                             </div>

@@ -36,8 +36,8 @@ class User extends CI_Controller {
 		//set into session
 		if ($result) 
 		{
-			// $SESSION["username"] = $uname;
-			// $SESSION["status"] = "active";
+			$_SESSION["username"] = $uname;
+			$_SESSION["status"] = "active";
 
 			//TODO send kalau berhasil login
 			header('Location: '.base_url()."dashboard");	
@@ -77,9 +77,15 @@ class User extends CI_Controller {
 		}
 	}
 
-	public function edit()
+	public function edit($arr)
 	{
+		$result = $this->DB->editUser($_POST);
+		if ($result){
+			
+		}
+		else {
 
+		}
 	}
 
 	

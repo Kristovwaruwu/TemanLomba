@@ -30,5 +30,19 @@ class DB extends CI_Model {
 		return $this->db->simple_query($q,$arr);
 	}
 
-	
+	public function getUserData($uname)
+	{
+		$q = "SELECT Username,Email,Name,Institution,Bio,Main_interest FROM tbl_user WHERE Username = ? LIMIT 1";
+		$result = $this->db->query($q,$uname);
+
+		return $result->row_array();
+	}
+
+	public function setUserData($arr)
+	{
+		$arr = array($arr["Name"], $arr["Institution"], $arr["Bio"], $arr["Username"]);
+		$q = "UPDATE tbl_user SET Name = ? Institution = ? , Bio = ? WHERE Username = ?";
+
+		return $result = $this->db->simple_query($q,$arr);
+	}
 }
