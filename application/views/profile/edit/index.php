@@ -35,7 +35,7 @@
 			</div>
 		</div>
 		<div class="col-md-2">
-        <a type="submit" class="btn btn-danger" name="btnAddMore" href="<?php echo base_url();?>profile/">Edit profile</a>
+        <a type="submit" class="btn btn-danger" name="btnAddMore" href="<?php echo base_url();?>profile/">Submit</a>
 		</div>
 	</div>
 	<div class="row">
@@ -58,31 +58,31 @@
 				<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <form method="post" action="<?php echo base_url();?>profile/edit">
 					    <div class="row">
-					    	<div class="col-md-6">
+					    	<div class="col-md-3">
 					    		<label>User Id</label>
 					    	</div>
 					    	<div class="col-md-6">
-					    		<input type="text" class="form-control" id="userID" placeholder="UserID">
+					    		<input type="text" class="form-control" id="Id_User" placeholder="UserID">
 					    	</div>
 					    </div>
 					    <div class="row">
-					    	<div class="col-md-6">
+					    	<div class="col-md-3">
 					    		<label>Name</label>
 					    	</div>
 					    	<div class="col-md-6">
-					    		<input type="text" class="form-control" id="inputPassword2" placeholder="Name">
+					    		<input type="text" class="form-control" id="Name" placeholder="Name">
 					    	</div>
 					    </div>
 					    <div class="row">
-					    	<div class="col-md-6">
+					    	<div class="col-md-3">
 					    		<label>Email</label>
 					    	</div>
 					    	<div class="col-md-6">
-					    		<input type="text" class="form-control" id="inputPassword2" placeholder="Email">
+					    		<input type="text" class="form-control" id="Email" placeholder="Email">
 					    	</div>
 					    </div>
 					    <div class="row">
-					    	<div class="col-md-6">
+					    	<div class="col-md-3">
 					    		<label>Institution</label>
 					    	</div>
 					    	<div class="col-md-6">
@@ -90,15 +90,12 @@
 					    	</div>
 					    </div>
 					    <div class="row">
-					    	<div class="col-md-6">
+					    	<div class="col-md-3">
 					    		<label>Phone</label>
 					    	</div>
 					    	<div class="col-md-6">
 					    		<input type="text" class="form-control" id="ihone" placeholder="Phone">
 					    	</div>
-                        </div>
-                        <div class="row">
-                            <input type="submit" placeholder="Submit">
                         </div>
                     </form>
 				</div>
