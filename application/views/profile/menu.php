@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                        <a type="submit" class="profile-edit-btn" href="<?php echo base_url()?>profile/edit">Edit Profile</a>
                     </div>
                 </div>
                 <div class="row">
@@ -79,7 +79,7 @@
                                         <div class="row">
                                             <div class="col-md-10">
                                             <label for="exampleFormControlTextarea1">Bio</label>
-                                                <text class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div>
                                         </div>
                             </div>

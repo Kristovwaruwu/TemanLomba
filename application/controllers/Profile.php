@@ -30,8 +30,13 @@ class Profile extends CI_Controller {
     function otherProfile($id)
     {
         $uname = $id;
+        $data = $this->DB->getUserData($uname);
+        if ($data === -1){
+            show_404();
+            return;
+        }
 		$params['page'] = 'view/index';
-		$params['data']['data'] = $this->DB->getUserData($uname);
+        $params['data']['data'] = $data;
 		$this->load->view('profile/layout',$params);
     }
     

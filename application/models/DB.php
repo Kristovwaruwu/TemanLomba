@@ -34,8 +34,9 @@ class DB extends CI_Model {
 	{
 		$q = "SELECT Username,Email,Name,Institution,Bio,Main_interest FROM tbl_user WHERE Username = ? LIMIT 1";
 		$result = $this->db->query($q,$uname);
-
-		return $result->row_array();
+		if ($result->num_rows())
+			return $result->row_array();
+		return -1;
 	}
 
 	public function setUserData($arr)
