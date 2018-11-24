@@ -16,3 +16,8 @@
 .nav-custom > a{
    padding: 10px!important;
 }
+
+.modal{
+	text-shadow: none;
+	color:#333;
+}

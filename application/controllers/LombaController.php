@@ -3,9 +3,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class LombaController extends CI_Controller {
 
-	function index(){
+	public function __construct(){
+		parent::__construct();
+		$this->load->model(['M_Lomba']);
+	}
+
+	public function index(){
 		$params['page'] = 'lomba/index';
-		$params['data']['tes']='aaaa';
+		$params['data']['lomba']=$this->M_Lomba->getAll();
 		$this->load->view('dashboard/layout',$params);
 	}
 }
