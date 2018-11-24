@@ -42,7 +42,8 @@ class Profile extends CI_Controller {
     
     function edit(){
         $uname = $_SESSION['username'];
-		$params['page'] = 'edit/index';
+        $params['page'] = 'edit/index';
+        $params['data']['data'] = $this->DB->getUserData($uname);
 		$this->load->view('profile/layout',$params);
     }
 }
