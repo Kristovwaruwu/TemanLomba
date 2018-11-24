@@ -12,13 +12,13 @@
           <?php if(!empty($lomba)){ 
             foreach ($lomba as $data) {?>
 
-          <div class="col-md-3">
+          <div class="col-md-3 card-container" id="card-lomba-<?php echo $data->Id_Lomba;?>">
             <div class="card-group">
               <div class="card">
     <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
     <div class="card-body">
       <?php $kategori = $this->M_Lomba->getByIdKategori($data->Id_Kategori); ?>
-      <h5 class="card-title"><?= $data->Judul ?></h5>
+      <a class="card-title h5" href="<?php echo base_url()?>dashboard/lomba/item/<?php echo $data->Id_Lomba;?>"><?= $data->Judul ?></a>
       <p class="card-text"><?= $data->Deskripsi ?></p>
       <p><small class="text-muted">kategori : <span class="badge badge-primary"> <?= !empty($kategori->Judul_Kategori) ? $kategori->Judul_Kategori :"-" ?></span></small></p>
   </div>

@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['dashboard'] = 'DashboardController';
 
 $route['dashboard/lomba'] = 'LombaController';
+$route['dashboard/lomba/item/(:any)'] = 'LombaController/item/$1';
 $route['dashboard/lomba/tambah'] = 'LombaController/add';
 $route['profile/edit'] = 'Profile/edit';
 $route['profile/(:any)'] = 'Profile/otherProfile/$1';
