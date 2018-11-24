@@ -14,5 +14,11 @@ class ListController extends CI_Controller {
 		$this->load->view('front/layout',$params);
 	}
 
+	public function detail($id){
+		$params['page'] = 'list-lomba/detail';
+		$params['data']['lomba']=$this->M_Lomba->getSingleLomba($id);
+		$this->load->view('front/layout',$params);
+	}
+
 	
 }

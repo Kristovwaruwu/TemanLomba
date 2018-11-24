@@ -57,6 +57,7 @@ $route['dashboard/lomba/tambah'] = 'LombaController/add';
 $route['profile/edit'] = 'Profile/edit';
 $route['profile/(:any)'] = 'Profile/otherProfile/$1';
 $route['list'] = 'ListController';
+$route['list/detail/(:num)'] = 'ListController/detail/$1';
 
 $route['default_controller'] = 'HomeController';
 $route['404_override'] = '';
