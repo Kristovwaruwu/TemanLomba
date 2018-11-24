@@ -11,7 +11,7 @@ class Profile extends CI_Controller {
     }
     
 	function index(){
-		$params['page'] = 'home/index';
+		$params['page'] = 'view/index';
 		$params['data']['tes']='aaaa';
 		$this->load->view('profile/layout',$params);
 	}
