@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/style.css">
 </head>
 <body>
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
@@ -14,4 +15,4 @@
           <a class="nav-link" href="#">Sign out</a>
         </li>
       </ul>
-    </nav>
+</nav>

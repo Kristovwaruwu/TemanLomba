@@ -1,0 +1,18 @@
+.nav-masthead {
+    float: right;
+    padding: 1px!important;
+}
+.btn-home {
+    background: #ffc107!important;
+}
+.cover-container{
+    max-width: 100%!important;
+   
+}
+.masthead-brand{
+    margin-left: 5%!important;
+}
+
+.nav-custom > a{
+   padding: 10px!important;
+}
