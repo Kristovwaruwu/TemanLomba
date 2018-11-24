@@ -22,7 +22,7 @@ class LombaController extends CI_Controller {
 		$params['page'] = 'lomba/item';
 		$result = $this->M_Lomba->getSingleLomba($id);
 		$params['data']['lomba']=$result;
-		$params['data']['nama']=$result[0]["Judul"];
+		$params['data']['nama']=!empty($result[0]["Judul"])?$result[0]["Judul"] :null;
 		$this->load->view('dashboard/layout',$params);
 	}
 
