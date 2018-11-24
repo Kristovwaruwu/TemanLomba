@@ -20,7 +20,6 @@
       <h5 class="card-title"><?= $data->Judul ?></h5>
       <p class="card-text"><?= $data->Deskripsi ?></p>
       <p><small class="text-muted">kategori : <span class="badge badge-primary"> <?= !empty($kategori->Judul_Kategori) ? $kategori->Judul_Kategori :"-" ?></span></small></p>
-    </div>
   </div>
           </div>
 

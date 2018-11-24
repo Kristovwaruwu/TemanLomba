@@ -23,7 +23,6 @@ class User extends CI_Controller {
 
 	public function login()
 	{
-		session_start();
 
 		if (!isset( $_POST["Password"])){
 			header('Location: '.base_url()."dashboard");
