@@ -18,7 +18,11 @@
                 </a>
                 <a class="nav-link" href="<?= base_url() ?>dashboard/lomba">
                   <span data-feather="home"></span>
-                  Lihat Postingan Lomba<span class="sr-only"></span>
+                  Lihat Postingan saya<span class="sr-only"></span>
+                </a>
+                <a class="nav-link" href="<?= base_url() ?>list/">
+                  <span data-feather="home"></span>
+                  Lihat Feeds Lomba<span class="sr-only"></span>
                 </a>
                 <a class="nav-link" href="<?= base_url() ?>profile/">
                   <span data-feather="home"></span>
