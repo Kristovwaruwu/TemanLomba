@@ -7,10 +7,10 @@
               <div class="card">
 
               <div class="card-body">
-              	<h2 class="card-title"><?= $lomba[0]['Judul'] ?></h2>
+              	<h2 class="card-title"><?= $lomba->Judul ?></h2>
               	<hr>
               	<h6>Deskripsi</h6>
-              	<div class="card-text"><?= $lomba[0]['Deskripsi'] ?></div>
+              	<div class="card-text"><?= $lomba->Deskripsi ?></div>
               </div>
 
               </div>
@@ -22,22 +22,23 @@
               <div class="card">
 
               	<div class="card-body">
-              	<a class="btn btn-primary btn-lg btn-block" href="">Ikut Bergabung</a>
+              	
+              	<a class="btn btn-primary  btn-lg btn-block"  data-toggle="modal" <?= !isset($_SESSION["username"]) ? 'data-target="#loginModal"':'data-target="#gabungModal"'?> href="">Ikut Bergabung</a>
               	<hr>
               	<?php 
-              	if(!empty($lomba[0]['Name'])){
-              	$total = count($lomba);
+              	if(!empty($user)){
+              	$total = count($user);
  				?> 
 
  				<div style="margin-bottom: 20px" clas="text-muted"><small><b> <?= $total ?></b> Orang Yang Ingin bergabung</small> </div>     	
-              	<?php foreach ($lomba as $data) { 
+              	<?php foreach ($user as $data) { 
               		
               		?>
               		<div class="clearfix" style="position: relative;">
               			<img width="60" src="<?= base_url() ?>assets/img/user.jpg" class="float-left rounded-circle"> 
               			<div style="padding-left: 80px;">
-              				<h6 style="margin-bottom: 0px"><a href="<?= base_url() ?>profile/<?= $data['Username'] ?>"><?= $data['Name'] ?></a></h6>
-              				<span class="text-muted"><small><?= $data['Institution'] ?></small></span>	
+              				<h6 style="margin-bottom: 0px"><a href="<?= base_url() ?>profile/<?= $data->Username?>"><?= $data->Username ?></a></h6>
+              				<span class="text-muted"><small><?= $data->Institution ?></small></span>	
               			</div>
               		</div>
               		

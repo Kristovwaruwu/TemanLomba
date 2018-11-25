@@ -16,8 +16,27 @@ class ListController extends CI_Controller {
 
 	public function detail($id){
 		$params['page'] = 'list-lomba/detail';
-		$params['data']['lomba']=$this->M_Lomba->getSingleLomba($id);
+		$lomba = $this->M_Lomba->getById($id);
+		$params['data']['lomba']= $lomba;
+		$params['data']['user'] = $this->M_Lomba->getAllUserByIdLomba($lomba->Id_Lomba);	
 		$this->load->view('front/layout',$params);
+	}
+
+	public function save_gabung(){
+		$post = $this->input->post();
+		if($this->input->server('REQUEST_METHOD') == 'POST'){
+			$user = $this->M_Lomba->getUserId($post['username']);
+			$id_user = $post['id_lomba'];
+			$data= [
+				'Id_Lomba' => $id_user,
+				'Id_User' => $user->Id_User
+			];
+
+			if($this->M_Lomba->save_request($data)){
+				redirect(base_url()."list/detail/".$id_user);
+			}
+		}
+
 	}
 
 	

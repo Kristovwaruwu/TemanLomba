@@ -12,5 +12,6 @@ if($page =="home/index"){
 
 $this->load->view('front/'.$page,$data);
 $this->load->view('loginmodal');
+$this->load->view('gabungmodal');
 $this->load->view('registermodal');
 $this->load->view('front/footer');

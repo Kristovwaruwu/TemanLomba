@@ -34,4 +34,19 @@ class M_Lomba extends CI_Model {
 		return $this->db->get_where("Tbl_Kategori",['Id_Kategori'=>$id])->row();
 	}
 
+	public function getAllUserByIdLomba($id_lomba){
+		return $this->db->query("SELECT * 
+			FROM tbl_request
+			INNER JOIN tbl_user ON tbl_request.Id_User = tbl_user.Id_User 
+			WHERE tbl_request.Id_Lomba = $id_lomba")->result();
+	}
+
+	public function getUserId($username){
+		return $this->db->get_where("tbl_user",['Username'=>$username])->row();	
+	}
+
+	public function save_request($data){
+		return $this->db->insert("tbl_request",$data);
+	}
+
 }
