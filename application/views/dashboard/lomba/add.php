@@ -19,7 +19,7 @@
     </select>
   </div>
   <div class="form-group">
-  <label>Deskripsi Lomba</label>
+  <label>Deskripsi Partner yang ingin kamu cari</label>
   <textarea name="deskripsi" class="form-control" placeholder="Deskripsi Lomba"></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Post Lomba</button>
