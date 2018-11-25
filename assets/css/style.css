@@ -93,3 +93,7 @@ a.card-lomba:hover {
     background: #ffc107;
     color: white;
 }
+
+.dropdown-menu {
+    left:-50px!important;
+}
