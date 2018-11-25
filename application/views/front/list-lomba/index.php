@@ -20,7 +20,7 @@
     <?php foreach ($lomba as $data) {?>
 
       <div style="margin-bottom: 30px" class="col-md-4">
-        <a class="card-lomba" href="">      
+        <a class="card-lomba" href="<?= base_url() ?>list/detail/<?= $data->Id_Lomba ?>">      
             <div style="color:#333" class="card-group">
               <div class="card">
     <img class="card-img-top" src="<?= base_url() ?>assets/img/book.png" alt="Card image cap">

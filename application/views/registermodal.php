@@ -10,10 +10,10 @@
       <div class="modal-body" >
         <form action="<?php echo base_url()?>user/create" method="post">
 			<div class="form-group" >
-			  <input name="Username" class="form-control" id="inputusername1" placeholder="Enter Username" required>
+			  <input name="Username" class="form-control" placeholder="Enter Username" required>
             </div>
             <div class="form-group" >
-			  <input name="Email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+			  <input name="Email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" required>
             </div>
 			<div class="form-group">
 			  <input name="Password" type="password" class="form-control" id="inputPassword1" placeholder="Enter Password" required>

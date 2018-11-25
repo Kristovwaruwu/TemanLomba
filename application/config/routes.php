@@ -58,6 +58,8 @@ $route['dashboard/lomba/delete/(:num)'] = 'LombaController/delete/$1';
 $route['profile/edit'] = 'Profile/edit';
 $route['profile/(:any)'] = 'Profile/otherProfile/$1';
 $route['list'] = 'ListController';
+$route['list/detail/(:num)'] = 'ListController/detail/$1';
+$route['gabung'] = 'ListController/save_gabung';
 
 $route['default_controller'] = 'HomeController';
 $route['404_override'] = '';
