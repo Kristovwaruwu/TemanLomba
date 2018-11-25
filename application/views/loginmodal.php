@@ -2,7 +2,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Login</h5>
+        <h5 class="modal-title">Masuk</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -15,7 +15,7 @@
       <div class="form-group">
 			  <input name="Password" type="password" class="form-control" placeholder="Password">
 			</div>
-			<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+			<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Masuk</button>
 		  </form>
       </div>
     </div>

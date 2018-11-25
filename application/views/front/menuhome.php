@@ -4,8 +4,8 @@
           <nav class="nav nav-masthead nav-custom">
             <a class="nav-link active" href="#">Home</a>
             <a class="nav-link" href="#">Dashboard</a>
-            <button class="nav-link" role="register" data-toggle="modal" data-target="#registermodal">Signup</button>
-            <button class="btn btn-light" role="login" data-toggle="modal" data-target="#loginModal" id="button">Login</button>
+            <button class="nav-link" role="register" data-toggle="modal" data-target="#registermodal">Daftar</button>
+            <button class="btn btn-light" role="login" data-toggle="modal" data-target="#loginModal" id="button">Masuk</button>
           </nav> 
         </div>
       </header>
