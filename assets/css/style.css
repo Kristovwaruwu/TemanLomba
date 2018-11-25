@@ -1,9 +1,24 @@
+.lead{
+    text-shadow: 2px 2px #000000;
+}
+
+.card-container{
+    margin-bottom: 10px;
+}
+
 .nav-masthead {
     float: right;
     padding: 1px!important;
 }
-.btn-home {
+
+.btn-home{
+    background: #a108fe !important;
+    color: #fffafa;
+}
+
+.btn-home:hover {
     background: #ffc107!important;
+    color: #321;
 }
 .cover-container{
     max-width: 100%!important;
@@ -43,8 +58,11 @@ p.card-text{
 
 }
 #button {
-    margin-left: 10px;
+    margin-left: 40px;
     cursor: pointer;
+    width: 100px;
+    font-weight: 700;
+    font-size : 1.25rem;
 }
 
 .nav-masthead .nav-link {
@@ -54,4 +72,24 @@ p.card-text{
     background-color: transparent;
     border: .25rem solid transparent;
 
+}
+
+a.card-lomba:hover {
+    text-decoration: none
+}
+
+.dashboard-img{
+    margin-left: 27px;
+    margin-right: 27px;
+    text-align: center;
+}
+
+#round-img{
+    width: 70%;
+    height: 100%;
+}
+
+.badge-costom{
+    background: #ffc107;
+    color: white;
 }

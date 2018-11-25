@@ -1,4 +1,4 @@
-<div class="modal " tabindex="-1" role="login" id="loginModal">
+<div class="modal fade" tabindex="-1" role="login" id="loginModal">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -10,10 +10,10 @@
       <div class="modal-body" >
         <form action="<?php echo base_url()?>user/login" method="post">
 			<div class="form-group" >
-			  <input name="Username" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+			  <input name="Username" class="form-control" placeholder="Username">
       </div>
       <div class="form-group">
-			  <input name="Password" type="password" class="form-control" id="inputPassword1" placeholder="Password">
+			  <input name="Password" type="password" class="form-control" placeholder="Password">
 			</div>
 			<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
 		  </form>

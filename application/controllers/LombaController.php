@@ -6,11 +6,23 @@ class LombaController extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model(['M_Lomba']);
+		if (!isset($_SESSION["username"])){
+			header('Location: '.base_url());	
+			die();
+		}
 	}
 
 	public function index(){
 		$params['page'] = 'lomba/index';
 		$params['data']['lomba']=$this->M_Lomba->getAll();
+		$this->load->view('dashboard/layout',$params);
+	}
+
+	public function item($id){
+		$params['page'] = 'lomba/item';
+		$result = $this->M_Lomba->getSingleLomba($id);
+		$params['data']['lomba']=$result;
+		$params['data']['nama']=!empty($result[0]["Judul"])?$result[0]["Judul"] :null;
 		$this->load->view('dashboard/layout',$params);
 	}
 
@@ -32,5 +44,11 @@ class LombaController extends CI_Controller {
 		}
 		
 		$this->load->view('dashboard/layout',$params);
+	}
+
+	public function delete($id){
+		if ($this->M_Lomba->deleteLomba($id)){
+			redirect(base_url()."dashboard/lomba");
+		}
 	}
 }
