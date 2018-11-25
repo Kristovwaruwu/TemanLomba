@@ -5,6 +5,7 @@ class DashboardController extends CI_Controller {
 
 	function __construct()
 	{
+		parent::__construct();
 		if (!isset($_SESSION["username"])) redirect(base_url());
 	}
 
