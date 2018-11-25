@@ -14,7 +14,7 @@ class LombaController extends CI_Controller {
 
 	public function index(){
 		$params['page'] = 'lomba/index';
-		$params['data']['lomba']=$this->M_Lomba->getAll();
+		$params['data']['lomba']=$this->M_Lomba->getLombaFromUser($_SESSION['userId']);
 		$this->load->view('dashboard/layout',$params);
 	}
 
@@ -34,7 +34,8 @@ class LombaController extends CI_Controller {
 			$data = [
 				"Judul" => $post['judul'],
 				"Id_Kategori" => $post['kategori'],
-				"Deskripsi" =>$post['deskripsi']
+				"Deskripsi" =>$post['deskripsi'],
+				"Id_User" =>$_SESSION["userId"]
 			];
 
 			if($this->M_Lomba->save($data)){
