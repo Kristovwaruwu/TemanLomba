@@ -6,7 +6,7 @@
               <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <span data-feather="home"></span>
-                  
+                  <br>
                   <br>
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
