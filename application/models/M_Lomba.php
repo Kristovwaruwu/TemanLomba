@@ -49,4 +49,8 @@ class M_Lomba extends CI_Model {
 		return $this->db->insert("tbl_request",$data);
 	}
 
+	public function deleteLomba($id){
+		$q = "DELETE FROM tbl_lomba where Id_Lomba = $id";
+		return $this->db->simple_query($q);
+	}
 }

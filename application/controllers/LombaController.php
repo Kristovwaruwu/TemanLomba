@@ -45,4 +45,10 @@ class LombaController extends CI_Controller {
 		
 		$this->load->view('dashboard/layout',$params);
 	}
+
+	public function delete($id){
+		if ($this->M_Lomba->deleteLomba($id)){
+			redirect(base_url()."dashboard/lomba");
+		}
+	}
 }
