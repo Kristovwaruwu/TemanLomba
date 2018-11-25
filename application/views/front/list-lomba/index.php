@@ -6,7 +6,7 @@
 <div class="col-md-12">
   <div style="margin-bottom: 30px!important" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
-  <h4>Patner Lomba Anda Sudah Menunggu!</h4>
+  <h4>Partner Lomba Anda Sudah Menunggu!</h4>
 
   <div class="btn-toolbar mb-2 mb-md-0">
               <form class="form-inline my-2 my-lg-0">
