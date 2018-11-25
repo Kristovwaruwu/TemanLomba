@@ -12,6 +12,13 @@ class M_Lomba extends CI_Model {
 		return $this->db->get($this->_Tabel)->result();
 	}
 
+	public function getLombaFromUser($uname)
+	{
+		$q = "SELECT * FROM $this->_Tabel WHERE Id_User = $uname";
+		$result = $this->db->query($q);
+		return $result->result();
+	}
+
 	public function save($data){
 		return $this->db->insert($this->_Tabel,$data);
 	}

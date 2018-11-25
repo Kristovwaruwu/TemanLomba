@@ -15,7 +15,9 @@ class DB extends CI_Model {
 		$query = $this->db->query($q);
 		$result = $query->result_array();
 		//return $query->result();
-		return count($result)?true:false;
+		if (count($result))
+			return $result[0]["Id_User"];
+		else return false;
 	}
 
 	public function createUser($arr)

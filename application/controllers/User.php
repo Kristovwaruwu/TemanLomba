@@ -37,7 +37,7 @@ class User extends CI_Controller {
 		{
 			$_SESSION["username"] = $uname;
 			$_SESSION["status"] = "active";
-
+			$_SESSION["userId"] = $result;
 			//TODO send kalau berhasil login
 			header('Location: '.base_url()."dashboard");	
 			die();
